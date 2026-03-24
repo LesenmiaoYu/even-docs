@@ -1,0 +1,121 @@
+@import 'tailwindcss';
+
+/*
+ * Even Realities — Starlight Theme Overrides
+ * Based on Design Library 3.0 tokens and Brand Guideline 1.X
+ *
+ * Font: FK Grotesk Neue (loaded via @font-face below)
+ * Colors: ER-Black #222, ER-White #FFF, Accent Yellow #FEF991
+ * Neutrals: Design Library 3.0 scale
+ */
+
+/* ── Font Faces ── */
+
+@font-face {
+	font-family: 'FK Grotesk Neue';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url('/fonts/FKGroteskNeue-Light.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'FK Grotesk Neue';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/fonts/FKGroteskNeue-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'FK Grotesk Neue';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url('/fonts/FKGroteskNeue-Medium.woff2') format('woff2');
+}
+
+/* ── Starlight CSS Custom Properties ── */
+
+:root {
+	/* Typography */
+	--sl-font: 'FK Grotesk Neue', 'Source Han Sans SC', 'Helvetica Neue',
+		Helvetica, Arial, sans-serif;
+	--sl-font-mono: 'SF Mono', 'Fira Code', 'JetBrains Mono', Consolas,
+		monospace;
+	--sl-text-xs: 0.6875rem;    /* 11px — Detail */
+	--sl-text-sm: 0.8125rem;    /* 13px — Body Small / Subtitle */
+	--sl-text-base: 0.9375rem;  /* 15px — Body Medium */
+	--sl-text-lg: 1.0625rem;    /* 17px — Body Large / Title 1 */
+	--sl-text-xl: 1.25rem;      /* 20px — Semi-Large Title 2 */
+	--sl-text-2xl: 1.5rem;      /* 24px — Semi-Large Title 1 */
+	--sl-text-3xl: 1.75rem;     /* 28px — Title Medium */
+	--sl-text-4xl: 2rem;        /* 32px — Title Large */
+
+	/* Brand letter-spacing: tight tracking */
+	letter-spacing: -0.02em;
+
+	/* ── Light Theme (default) ── */
+
+	/* Accent: Brand Yellow #FEF991 */
+	--sl-color-accent-low: #fef9e0;       /* yellow tinted background */
+	--sl-color-accent: #c9a800;           /* darker gold for contrast on white */
+	--sl-color-accent-high: #222222;      /* ER-Black for text on accent bg */
+
+	/* Grays — Design Library 3.0 Neutral scale */
+	--sl-color-gray-1: #f2f2f2;  /* Neutral-100 — lightest bg */
+	--sl-color-gray-2: #e5e5e5;  /* Neutral-200 */
+	--sl-color-gray-3: #bdbdbd;  /* Neutral-300 */
+	--sl-color-gray-4: #737373;  /* Neutral-500 */
+	--sl-color-gray-5: #3e3e3e;  /* Neutral-700 */
+	--sl-color-gray-6: #232323;  /* Neutral-800 — near ER-Black */
+	--sl-color-gray-7: #171717;  /* Neutral-850 */
+
+	--sl-color-white: #ffffff;
+	--sl-color-black: #222222;   /* ER-Black, not pure black */
+}
+
+/* ── Dark Theme ── */
+
+:root[data-theme='dark'] {
+	/* Accent: Brand Yellow — works well on dark */
+	--sl-color-accent-low: #3e3500;       /* deep gold bg */
+	--sl-color-accent: #fef991;           /* full brand yellow */
+	--sl-color-accent-high: #222222;      /* ER-Black for text on accent */
+
+	/* Grays — inverted from Design Library 3.0 dark surfaces */
+	--sl-color-gray-1: #2e2e2e;  /* Neutral-750 */
+	--sl-color-gray-2: #3e3e3e;  /* Neutral-700 */
+	--sl-color-gray-3: #595959;  /* Neutral-600 */
+	--sl-color-gray-4: #999999;  /* Neutral-400 */
+	--sl-color-gray-5: #bdbdbd;  /* Neutral-300 */
+	--sl-color-gray-6: #e5e5e5;  /* Neutral-200 */
+	--sl-color-gray-7: #f2f2f2;  /* Neutral-100 */
+
+	--sl-color-white: #222222;   /* ER-Black as "white" in dark mode */
+	--sl-color-black: #f2f2f2;   /* light text on dark */
+}
+
+/* ── Global refinements ── */
+
+/* Tighten heading tracking per brand spec */
+.sl-markdown-content h1 { letter-spacing: -0.04em; }
+.sl-markdown-content h2 { letter-spacing: -0.03em; }
+.sl-markdown-content h3,
+.sl-markdown-content h4 { letter-spacing: -0.02em; }
+
+/* Line height: 128% per Even brand body text standard */
+.sl-markdown-content p,
+.sl-markdown-content li {
+	line-height: 1.6;
+}
+
+/* Code blocks: slightly warmer bg in dark */
+:root[data-theme='dark'] pre {
+	background-color: #1a1a1a !important;
+}
+
+/* Sidebar active item uses accent */
+nav.sidebar a[aria-current='page'] {
+	font-weight: 500;
+}

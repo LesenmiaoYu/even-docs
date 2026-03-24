@@ -1,0 +1,41 @@
+---
+title: Even Realities Developer Docs
+description: Build apps for the G2 smart glasses.
+template: splash
+hero:
+  tagline: Build apps for G2 smart glasses — from zero to deployed.
+  actions:
+    - text: Get Started
+      link: /getting-started/overview/
+      icon: right-arrow
+      variant: primary
+    - text: View on npm
+      link: https://www.npmjs.com/package/@evenrealities/even_hub_sdk
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+	<Card title="SDK" icon="setting">
+		Typed JavaScript SDK for display control, input handling, audio, device info, and storage.
+
+		[Install →](/getting-started/installation/)
+	</Card>
+	<Card title="Simulator" icon="laptop">
+		Preview layouts and test logic without hardware. Cross-platform, installable via npm.
+
+		[Reference →](/reference/simulator/)
+	</Card>
+	<Card title="CLI" icon="terminal">
+		Authentication, QR sideloading, and `.ehpk` packaging in one tool.
+
+		[Reference →](/reference/cli/)
+	</Card>
+	<Card title="Design Guidelines" icon="document">
+		Official UI/UX guidelines for the 576x288 glasses display.
+
+		[View →](/guides/design-guidelines/)
+	</Card>
+</CardGrid>
