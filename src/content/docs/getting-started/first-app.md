@@ -3,7 +3,7 @@ title: Your First App
 description: Build and run a minimal G2 glasses app.
 ---
 
-## SDK Initialization
+## Initialize the SDK
 
 ```typescript
 import { waitForEvenAppBridge, EvenAppBridge } from '@evenrealities/even_hub_sdk'
@@ -15,7 +15,7 @@ const bridge = await waitForEvenAppBridge()
 const bridge = EvenAppBridge.getInstance()
 ```
 
-## Creating a Page
+## Create a Page
 
 Display a simple text screen on the glasses:
 
@@ -53,16 +53,20 @@ const result = await bridge.createStartUpPageContainer(1, [textContainer])
 evenhub-simulator http://localhost:5173
 ```
 
+No hardware needed — the simulator renders the glasses display on your screen.
+
 ### On Real Hardware
+
+Generate a QR code pointing to your local dev server:
 
 ```bash
 evenhub qr --url "http://192.168.1.100:5173"
 ```
 
-Scan the QR code with the Even App on your phone. Your app loads on the glasses with hot reload support.
+Scan it with the **Even Realities App** on your phone. Your app loads on the glasses with hot reload support.
 
 ## Next Steps
 
 - Learn about the [Display & UI System](/guides/display/) — containers, text, images, and fonts
-- Understand [Input & Events](/guides/input-events/) — handling taps, scrolls, and ring input
+- Understand [Input & Events](/guides/input-events/) — handling presses, swipes, and gestures
 - Read the [Design Guidelines](/guides/design-guidelines/) for the 576x288 canvas

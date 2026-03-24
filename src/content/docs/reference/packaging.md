@@ -37,4 +37,11 @@ npm run build
 evenhub pack app.json dist -o myapp.ehpk
 ```
 
-The `.ehpk` file is the distribution format for the Even Hub platform. Once submitted, your app is hosted on Even Hub's cloud and made available to users through the Even App.
+The `.ehpk` file is the distribution format for the Even Hub platform.
+
+## Distribution
+
+Once submitted, your app becomes available on the **Even Hub** page. Users can:
+
+- **Download** your app from Even Hub
+- **Launch** it from the glasses menu or through the Even Realities App on their phone

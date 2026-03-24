@@ -1,16 +1,27 @@
 ---
 title: Input & Events
-description: Handling taps, scrolls, ring input, and lifecycle events.
+description: Handling presses, swipes, and lifecycle events from the G2 and R1.
 ---
+
+## Input Sources
+
+The G2 glasses and optional R1 ring both provide touchpad input:
+
+| Source | Gestures |
+|---|---|
+| **G2 touchpads** (temple) | Press, double press, swipe up, swipe down |
+| **R1 touchpads** (ring) | Press, double press, swipe up, swipe down |
+
+Both input sources produce the same event types — your app does not need to distinguish between them.
 
 ## Event Types
 
-| Event | Value | Source |
+| Event | Value | Description |
 |---|---|---|
-| `CLICK_EVENT` | 0 | Ring tap, temple tap |
-| `SCROLL_TOP_EVENT` | 1 | Scroll reaches top boundary |
-| `SCROLL_BOTTOM_EVENT` | 2 | Scroll reaches bottom boundary |
-| `DOUBLE_CLICK_EVENT` | 3 | Ring/temple double-tap |
+| `CLICK_EVENT` | 0 | Single press (G2 or R1) |
+| `SCROLL_TOP_EVENT` | 1 | Swipe up / scroll reaches top boundary |
+| `SCROLL_BOTTOM_EVENT` | 2 | Swipe down / scroll reaches bottom boundary |
+| `DOUBLE_CLICK_EVENT` | 3 | Double press (G2 or R1) |
 | `FOREGROUND_ENTER_EVENT` | 4 | App comes to foreground |
 | `FOREGROUND_EXIT_EVENT` | 5 | App goes to background |
 | `ABNORMAL_EXIT_EVENT` | 6 | Unexpected disconnect |
@@ -19,41 +30,44 @@ description: Handling taps, scrolls, ring input, and lifecycle events.
 
 ```typescript
 bridge.onEvenHubEvent((event) => {
-  // Events arrive as one of: listEvent, textEvent, sysEvent, audioEvent, jsonData
   const textEvent = event.textEvent
   if (textEvent) {
     const eventType = textEvent.eventType
-    if (eventType === OsEventTypeList.CLICK_EVENT || eventType === undefined) {
-      // Handle click (see quirks below for why we check undefined)
+
+    switch (eventType) {
+      case OsEventTypeList.CLICK_EVENT:
+      case undefined: // SDK normalizes 0 to undefined in some cases
+        // Handle press
+        break
+      case OsEventTypeList.DOUBLE_CLICK_EVENT:
+        // Handle double press
+        break
+      case OsEventTypeList.SCROLL_TOP_EVENT:
+        // Handle swipe up / scroll up
+        break
+      case OsEventTypeList.SCROLL_BOTTOM_EVENT:
+        // Handle swipe down / scroll down
+        break
     }
   }
 })
 ```
 
-Event routing depends on which container has `isEventCapture: 1`:
-- **List container** captures → events arrive as `listEvent`
-- **Text container** captures → events arrive as `textEvent`
+## Event Routing
 
-## Known Quirks
+Event delivery depends on which container has `isEventCapture: 1`:
 
-These are important and will save you debugging time:
+| Capture container type | Events arrive as |
+|---|---|
+| **Text container** | `event.textEvent` |
+| **List container** | `event.listEvent` |
 
-### 1. `CLICK_EVENT = 0` becomes `undefined`
+Only **one** container per page can capture events. Design your interaction model around a single active input target.
 
-The SDK's `fromJson` normalizes the value `0` to `undefined`. Always check for both:
+## Lifecycle Events
 
-```typescript
-eventType === OsEventTypeList.CLICK_EVENT || eventType === undefined
-```
+Your app receives lifecycle events when its visibility changes:
 
-### 2. Missing `currentSelectItemIndex`
-
-The simulator omits this field when the index is `0`. Track selection state yourself as a fallback.
-
-### 3. Simulator vs. hardware events
-
-The simulator sends `sysEvent` for button clicks; real hardware sends `textEvent` or `listEvent`. Handle both paths.
-
-### 4. Swipe throttling
-
-Apply a ~300ms cooldown to prevent duplicate scroll actions.
+- **`FOREGROUND_ENTER_EVENT`** — the user has opened or returned to your app. Use this to resume updates or refresh data.
+- **`FOREGROUND_EXIT_EVENT`** — your app has moved to the background. Pause any timers or ongoing work.
+- **`ABNORMAL_EXIT_EVENT`** — the Bluetooth connection was lost unexpectedly.

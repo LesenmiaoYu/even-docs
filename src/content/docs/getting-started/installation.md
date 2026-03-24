@@ -5,10 +5,11 @@ description: Install the SDK, Simulator, and CLI.
 
 ## Prerequisites
 
-- Node.js (v18+)
-- A modern web framework (Vite recommended, but any works)
-- A phone with the Even App installed (for hardware testing)
-- G2 glasses + R1 ring (for hardware testing; the simulator covers early development)
+- **Node.js** (v18+)
+- A web framework of your choice (Vite recommended)
+- A phone with the **Even Realities App** installed (for hardware testing)
+- **G2 glasses** (for hardware testing; the simulator covers early development)
+- **R1 ring** (optional — provides additional touchpad input)
 
 ## Install the SDK
 

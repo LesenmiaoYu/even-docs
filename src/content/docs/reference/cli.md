@@ -30,4 +30,4 @@ During development, sideload your app directly to the glasses:
 evenhub qr --url "http://192.168.1.100:5173"
 ```
 
-Scan the QR code with the Even App on your phone. Your app loads on the glasses with hot reload support.
+Scan the QR code with the **Even Realities App** on your phone. Your app loads on the glasses with hot reload support.
