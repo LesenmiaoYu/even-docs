@@ -13,6 +13,7 @@
   "dependencies": {
     "@astrojs/starlight": "^0.38.2",
     "@astrojs/vercel": "^10.0.2",
+    "@evenrealities/evenhub-cli": "^0.1.10",
     "@tailwindcss/vite": "^4.2.2",
     "astro": "^6.0.1",
     "sharp": "^0.34.2",

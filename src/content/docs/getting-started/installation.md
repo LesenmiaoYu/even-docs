@@ -17,7 +17,7 @@ description: Install the SDK, Simulator, and CLI.
 npm install @evenrealities/even_hub_sdk
 ```
 
-The SDK provides typed methods for display control, input handling, audio, device info, and local storage.
+Current version: **0.0.9**. The SDK provides typed methods for display control, input handling, audio, device info, and local storage.
 
 > **npm:** [@evenrealities/even_hub_sdk](https://www.npmjs.com/package/@evenrealities/even_hub_sdk)
 
@@ -28,6 +28,8 @@ The simulator lets you preview UI layouts and test logic without physical hardwa
 ```bash
 npm install -g @evenrealities/evenhub-simulator
 ```
+
+Current version: **0.6.2**. Cross-platform (macOS, Linux, Windows).
 
 > **npm:** [@evenrealities/evenhub-simulator](https://www.npmjs.com/package/@evenrealities/evenhub-simulator)
 
@@ -41,6 +43,8 @@ The CLI handles authentication, QR sideloading, and app packaging.
 npm install -D @evenrealities/evenhub-cli
 ```
 
+Current version: **0.1.10**. Can also be installed globally with `npm install -g`.
+
 > **npm:** [@evenrealities/evenhub-cli](https://www.npmjs.com/package/@evenrealities/evenhub-cli)
 
-See the full [CLI Reference](/reference/cli/) for all commands.
+See the full [CLI Reference](/reference/cli/) for all commands, and [Packaging & Deployment](/reference/packaging/) for the complete `app.json` schema and troubleshooting guide.

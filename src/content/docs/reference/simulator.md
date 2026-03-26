@@ -3,7 +3,7 @@ title: Simulator
 description: EvenHub glasses app simulator reference.
 ---
 
-The simulator lets you preview UI layouts and test logic without physical hardware. It is a supplement to — not a replacement for — hardware testing.
+The simulator (`v0.6.2`) lets you preview UI layouts and test logic without physical hardware. It is a supplement to — not a replacement for — hardware testing.
 
 ## Installation
 
@@ -11,7 +11,7 @@ The simulator lets you preview UI layouts and test logic without physical hardwa
 npm install -g @evenrealities/evenhub-simulator
 ```
 
-> **npm:** [@evenrealities/evenhub-simulator](https://www.npmjs.com/package/@evenrealities/evenhub-simulator)
+> **npm:** [@evenrealities/evenhub-simulator](https://www.npmjs.com/package/@evenrealities/evenhub-simulator) — cross-platform (macOS, Linux, Windows)
 
 ## Usage
 
