@@ -3,6 +3,8 @@ title: Installation
 description: Install the SDK, Simulator, and CLI.
 ---
 
+> **Last updated:** 2026-03-27
+
 ## Prerequisites
 
 - **Node.js** (v18+)

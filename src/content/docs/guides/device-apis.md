@@ -42,6 +42,14 @@ await bridge.setLocalStorage('key', 'value')
 const value = await bridge.getLocalStorage('key')
 ```
 
+## SDK Reference Documentation
+
+For the full API surface — including all method signatures, parameter types, return values, and event payloads — refer to the official SDK package documentation:
+
+> **npm:** [@evenrealities/even_hub_sdk](https://www.npmjs.com/package/@evenrealities/even_hub_sdk)
+
+The SDK TypeScript definitions (`*.d.ts` files) in the package serve as the authoritative reference for all available methods and types.
+
 ## What the SDK Does NOT Expose
 
 No direct Bluetooth access, no arbitrary pixel drawing, no audio output, no text alignment, no font control, no background colors, no per-item list styling, no programmatic scroll position, no animations, no camera (there is none), and images are greyscale only.

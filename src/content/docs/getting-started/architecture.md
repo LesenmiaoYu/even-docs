@@ -8,11 +8,11 @@ Even Hub apps are **web apps** built with standard web technologies and the Even
 ## Connection Model
 
 ```
-┌─────────────────┐     HTTPS     ┌───────────────────┐    Bluetooth    ┌──────────────┐
-│  Even Hub Cloud  │ ◄──────────► │  Phone             │ ◄────────────► │  G2 Glasses   │
-│  (distribution   │              │  (Even Realities   │                │  (display +   │
-│   & hosting)     │              │   App + WebView)   │                │   input)      │
-└─────────────────┘               └───────────────────┘                └──────────────┘
+┌──────────────────┐    HTTPS     ┌────────────────────┐   Bluetooth    ┌───────────────┐
+│  Even Hub Cloud   │ ◄──────────► │  Phone              │ ◄────────────► │  G2 Glasses    │
+│  (distribution    │              │  (Even Realities    │                │  (display +    │
+│   & hosting)      │              │   App + WebView)    │                │   input)       │
+└──────────────────┘              └────────────────────┘                └───────────────┘
 ```
 
 - **The phone** runs the Even Realities App, which opens your app in a WebView and handles all communication with the glasses over Bluetooth. Your app logic executes here.
@@ -56,4 +56,4 @@ my-app/
 └── app.json                 # Even Hub manifest (required for packaging)
 ```
 
-The SDK (`@evenrealities/even_hub_sdk`) is the only Even-specific dependency. Everything else is standard web tooling.
+The SDK ([`@evenrealities/even_hub_sdk`](https://www.npmjs.com/package/@evenrealities/even_hub_sdk)) is the only Even-specific dependency. Everything else is standard web tooling.

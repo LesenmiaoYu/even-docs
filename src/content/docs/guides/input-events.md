@@ -5,14 +5,15 @@ description: Handling presses, swipes, and lifecycle events from the G2 and R1.
 
 ## Input Sources
 
-The G2 glasses and optional R1 ring both provide touchpad input:
+The G2 glasses, optional R1 ring, and IMU sensors each provide distinct input:
 
-| Source | Gestures |
-|---|---|
-| **G2 touchpads** (temple) | Press, double press, swipe up, swipe down |
-| **R1 touchpads** (ring) | Press, double press, swipe up, swipe down |
+| Source | Gestures / Data | Notes |
+|---|---|---|
+| **G2 touchpads** (temple) | Press, double press, swipe up, swipe down | Primary input on the glasses frame |
+| **R1 touchpads** (ring) | Press, double press, swipe up, swipe down | Same gesture set as G2, but events are distinguishable by source |
+| **IMU** (accelerometer / gyroscope) | Head orientation, motion data | Available for motion-aware apps (e.g., head tracking, gesture detection) |
 
-Both input sources produce the same event types — your app does not need to distinguish between them.
+G2 and R1 touchpad events share the same event types but can now be distinguished by their input source, allowing apps to assign different behaviors to glasses vs. ring input.
 
 ## Event Types
 

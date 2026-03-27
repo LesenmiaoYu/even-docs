@@ -24,34 +24,34 @@ export default defineConfig({
 				{
 					label: 'Getting Started',
 					items: [
-						{ label: 'Overview', slug: 'getting-started/overview' },
-						{ label: 'Architecture', slug: 'getting-started/architecture' },
-						{ label: 'Installation', slug: 'getting-started/installation' },
 						{ label: 'Your First App', slug: 'getting-started/first-app' },
+						{ label: 'Installation', slug: 'getting-started/installation' },
+						{ label: 'Architecture', slug: 'getting-started/architecture' },
+						{ label: 'Overview', slug: 'getting-started/overview' },
 					],
 				},
 				{
 					label: 'Guides',
 					items: [
-						{ label: 'Display & UI System', slug: 'guides/display' },
-						{ label: 'Input & Events', slug: 'guides/input-events' },
-						{ label: 'Page Lifecycle', slug: 'guides/page-lifecycle' },
-						{ label: 'Device APIs', slug: 'guides/device-apis' },
 						{ label: 'UI/UX Design Guidelines', slug: 'guides/design-guidelines' },
-					],
-				},
-				{
-					label: 'Reference',
-					items: [
-						{ label: 'Simulator', slug: 'reference/simulator' },
-						{ label: 'CLI', slug: 'reference/cli' },
-						{ label: 'Packaging & Deployment', slug: 'reference/packaging' },
+						{ label: 'Device APIs', slug: 'guides/device-apis' },
+						{ label: 'Page Lifecycle', slug: 'guides/page-lifecycle' },
+						{ label: 'Input & Events', slug: 'guides/input-events' },
+						{ label: 'Display & UI System', slug: 'guides/display' },
 					],
 				},
 				{
 					label: 'Community',
 					items: [
 						{ label: 'Resources', slug: 'community/resources' },
+					],
+				},
+				{
+					label: 'Reference',
+					items: [
+						{ label: 'Packaging & Deployment', slug: 'reference/packaging' },
+						{ label: 'CLI', slug: 'reference/cli' },
+						{ label: 'Simulator', slug: 'reference/simulator' },
 					],
 				},
 			],

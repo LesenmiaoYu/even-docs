@@ -9,7 +9,7 @@ Each eye displays a **576 x 288 pixel** canvas. Coordinate origin is at the top-
 
 All colors are rendered as **4-bit greyscale** — 16 levels of green. White pixels appear as bright green; black pixels are off (transparent).
 
-## Container Model
+## Containers
 
 The UI is built from **containers** — rectangular regions positioned with absolute pixel coordinates. There is no CSS, no flexbox, no DOM.
 
