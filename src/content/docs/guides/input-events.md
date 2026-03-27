@@ -11,7 +11,7 @@ The G2 glasses, optional R1 ring, and IMU sensors each provide distinct input:
 |---|---|---|
 | **G2 touchpads** (temple) | Press, double press, swipe up, swipe down | Primary input on the glasses frame |
 | **R1 touchpads** (ring) | Press, double press, swipe up, swipe down | Same gesture set as G2, but events are distinguishable by source |
-| **IMU** (accelerometer / gyroscope) | Head orientation, motion data | Available for motion-aware apps (e.g., head tracking, gesture detection) |
+| **IMU** (accelerometer / gyroscope) | Head orientation, motion data | Available for motion-aware apps — see [IMU API](/guides/device-apis/#imu) |
 
 G2 and R1 touchpad events share the same event types but can now be distinguished by their input source, allowing apps to assign different behaviors to glasses vs. ring input.
 
