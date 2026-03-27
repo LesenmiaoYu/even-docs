@@ -35,7 +35,7 @@ Current version: **0.6.2**. Cross-platform (macOS, Linux, Windows).
 
 > **npm:** [@evenrealities/evenhub-simulator](https://www.npmjs.com/package/@evenrealities/evenhub-simulator)
 
-See the full [Simulator Reference](/reference/simulator/) for options and caveats.
+See the full [Simulator Reference](/reference/simulator) for options and caveats.
 
 ## Install the CLI
 
@@ -49,4 +49,4 @@ Current version: **0.1.10**. Can also be installed globally with `npm install -g
 
 > **npm:** [@evenrealities/evenhub-cli](https://www.npmjs.com/package/@evenrealities/evenhub-cli)
 
-See the full [CLI Reference](/reference/cli/) for all commands, and [Packaging & Deployment](/reference/packaging/) for the complete `app.json` schema and troubleshooting guide.
+See the full [CLI Reference](/reference/cli) for all commands, and [Packaging & Deployment](/reference/packaging) for the complete `app.json` schema and troubleshooting guide.

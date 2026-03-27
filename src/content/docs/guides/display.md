@@ -15,7 +15,7 @@ The UI is built from **containers** — rectangular regions positioned with abso
 
 **Rules:**
 
-- Maximum **4 containers per page** (mixed types allowed)
+- Maximum **4 image containers** and **8 other containers** per page (mixed types allowed)
 - Exactly **one** container must have `isEventCapture: 1` — this container receives all input events
 - Containers can overlap; later containers draw on top
 - No z-index control beyond declaration order

@@ -94,7 +94,7 @@ evenhub pack app.json dist -o myapp.ehpk
 | `--no-ignore` | Include hidden files (dotfiles) |
 | `-c`, `--check` | Check if the `package_id` is available on Even Hub |
 
-See [Packaging & Deployment](/reference/packaging/) for the full `app.json` schema, validation rules, and troubleshooting guide.
+See [Packaging & Deployment](/reference/packaging) for the full `app.json` schema, validation rules, and troubleshooting guide.
 
 ## Shell Completions
 

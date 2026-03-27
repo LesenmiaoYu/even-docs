@@ -67,6 +67,6 @@ Scan it with the **Even Realities App** on your phone. Your app loads on the gla
 
 ## Next Steps
 
-- Learn about the [Display & UI System](/guides/display/) — containers, text, images, and fonts
-- Understand [Input & Events](/guides/input-events/) — handling presses, swipes, and gestures
-- Read the [Design Guidelines](/guides/design-guidelines/) for the 576x288 canvas
+- Learn about the [Display & UI System](/guides/display) — containers, text, images, and fonts
+- Understand [Input & Events](/guides/input-events) — handling presses, swipes, and gestures
+- Read the [Design Guidelines](/guides/design-guidelines) for the 576x288 canvas
